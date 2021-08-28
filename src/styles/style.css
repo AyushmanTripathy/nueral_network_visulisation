@@ -6,11 +6,40 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  justify-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #202124;
   font-family: "Roboto Mono", monospace;
   height: 100vh;
   width: 100vw;
   color: #bbb;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 20px;
+}
+
+canvas {
+  border: 1px solid #bbb;
 }
 /*# sourceMappingURL=style.css.map */
