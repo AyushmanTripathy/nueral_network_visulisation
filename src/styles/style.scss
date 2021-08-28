@@ -1,0 +1,21 @@
+$sec: #bbb;
+$bg: #202124;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300&display=swap");
+
+@mixin centered() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  @include centered;
+
+  background-color: $bg;
+  font-family: "Roboto Mono", monospace;
+
+  height: 100vh;
+  width: 100vw;
+  color: $sec;
+}
