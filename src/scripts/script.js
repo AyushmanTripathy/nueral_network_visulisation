@@ -57,11 +57,13 @@ function save() {
 }
 
 function load() {
-  weights = JSON.parse(localStorage.getItem("weights"));
-  bias = JSON.parse(localStorage.getItem("bias"));
+  const temp = JSON.parse(localStorage.getItem("weights"));
 
   //check if empty
-  if (!weights) return alert("nothing saved yet");
+  if (!temp) return alert("nothing saved yet");
+
+  weights = temp;
+  bias = JSON.parse(localStorage.getItem("bias"));
 
   //remove all childrens
   const weightsSection = document.getElementById("weights");
