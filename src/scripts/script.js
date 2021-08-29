@@ -12,7 +12,7 @@ let bias = [];
 
 window.onload = init;
 function init() {
-  dots = generateDots(5);
+  dots = generateDots(15);
   addSliders("changeWeight", "#weights", 12);
   addSliders("changeBias", "#biass", 5);
   start();

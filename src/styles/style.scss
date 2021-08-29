@@ -24,6 +24,11 @@ body {
 
 main {
   display: flex;
+  flex-direction: column;
+}
+
+#options {
+  display: flex;
   flex-direction: row;
 }
 
@@ -35,4 +40,15 @@ section {
 
 canvas {
   border: 1px solid $sec;
+}
+
+button {
+  background-color: $bg;
+  color: $sec;
+
+  font-family: "Roboto Mono", monospace;
+  padding: 5px;
+
+  border: 1px solid $sec;
+  margin-bottom: 10px;
 }

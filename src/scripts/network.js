@@ -30,7 +30,7 @@ function draw(dots) {
     if (dot.value) ctx.fillStyle = "red";
     else ctx.fillStyle = "blue";
 
-    ctx.ellipse(dot.x * blockSize, dot.y * blockSize, 5, 5, 0, 0, 360);
+    ctx.ellipse(dot.x * blockSize, dot.y * blockSize, 3, 3, 0, 0, 360);
     ctx.stroke();
     ctx.fill();
     ctx.closePath();
@@ -67,7 +67,7 @@ function model(x, y) {
 }
 
 function network(layers) {
-  const correctPrediction = layers[0][0] > layers[0][1] ? 1 : 0;
+  const correctPrediction = relation(layers[0][0], layers[0][1]);
 
   let n = 0;
   let b = 0;
@@ -126,8 +126,11 @@ function generateDots(num) {
       y: Math.floor(Math.random() * max) + min,
     };
 
-    if (arr[i].x < arr[i].y) arr[i].value = 0;
-    else arr[i].value = 1;
+    arr[i].value = relation(arr[i].x, arr[i].y);
   }
   return arr;
+}
+
+function relation(a, b) {
+  return a > b ? 1 : 0;
 }

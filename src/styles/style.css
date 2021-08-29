@@ -22,6 +22,16 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -41,5 +51,14 @@ section {
 
 canvas {
   border: 1px solid #bbb;
+}
+
+button {
+  background-color: #202124;
+  color: #bbb;
+  font-family: "Roboto Mono", monospace;
+  padding: 5px;
+  border: 1px solid #bbb;
+  margin-bottom: 10px;
 }
 /*# sourceMappingURL=style.css.map */

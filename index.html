@@ -9,20 +9,23 @@
   </head>
   <body>
     <main>
-      <section id="weights">
-        <label>Weights</label>
-      </section>
-      <section id="biass">
-        <label>Bias</label>
-      </section>
-      <section>
-        <label>Accuracy</label>
-        <h3 id="accuracyCounter"></h3>
-        <button onclick="save()">Save</button>
-        <button onclick="load()">Load</button>
-      </section>
+      <h3>Relation = x > y ? (red) : (blue)</h3>
+      <div id="options">
+        <section id="weights">
+          <label>Weights</label>
+        </section>
+        <section id="biass">
+          <label>Bias</label>
+        </section>
+        <section>
+          <label>Accuracy</label>
+          <h3 id="accuracyCounter"></h3>
+          <button onclick="save()">Save</button>
+          <button onclick="load()">Load</button>
+        </section>
+      </div>
     </main>
-    <canvas height="600px" width="600px"></canvas>
+    <canvas height="500px" width="500px"></canvas>
     <script defer src="./src/scripts/script.js"></script>
     <script defer src="./src/scripts/network.js"></script>
   </body>
