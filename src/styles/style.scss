@@ -3,14 +3,10 @@ $bg: #202124;
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300&display=swap");
 
-@mixin centered() {
+body {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-body {
-  @include centered;
 
   background-color: $bg;
   font-family: "Roboto Mono", monospace;
@@ -25,6 +21,8 @@ body {
 main {
   display: flex;
   flex-direction: column;
+
+  height: 80vh;
 }
 
 #options {
