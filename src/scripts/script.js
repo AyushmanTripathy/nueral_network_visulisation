@@ -60,6 +60,9 @@ function load() {
   weights = JSON.parse(localStorage.getItem("weights"));
   bias = JSON.parse(localStorage.getItem("bias"));
 
+  //check if empty
+  if (weights) return alert("nothing saved yet");
+
   //remove all childrens
   const weightsSection = document.getElementById("weights");
   while (weightsSection.firstChild) {
