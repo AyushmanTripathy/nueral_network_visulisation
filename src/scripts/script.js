@@ -7,14 +7,17 @@ const blockSize = canvas.width / gridSize;
 
 let dots;
 let layers = [];
-let weights = [];
-let bias = [];
+let weights = [
+  0.08, 0.93, -0.47, 0.6, -0.51, 0.78, 0.99, -0.09, 0.8, -0.52, -0.51, 0.08,
+];
+let bias = [-0.28, -1, 0.72, -0.65, 0.79];
 
 window.onload = init;
 function init() {
   dots = generateDots(15);
-  addSliders("changeWeight", "#weights", 12);
-  addSliders("changeBias", "#biass", 5);
+  changeSliders(weights, "#weights", "changeWeight");
+  changeSliders(bias, "#biass", "changeBias");
+
   start();
 }
 
