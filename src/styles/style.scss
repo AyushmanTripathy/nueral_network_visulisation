@@ -7,15 +7,23 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 
+  overflow-x: scroll;
   background-color: $bg;
   font-family: "Roboto Mono", monospace;
 
-  height: 100vh;
+  height: fit-content;
   width: 100vw;
   color: $sec;
 
   justify-content: space-around;
+}
+
+@media screen and (min-width: 950px) {
+  body {
+    flex-direction: row;
+  }
 }
 
 main {
